@@ -10,5 +10,5 @@ def pprocess(df):
     print('\033[34mВыведем описание датасета\033[0m')
     display(df.describe())
     
-    print('\033[34mВыведем дубли\033[0m')
+    print('\033[34mВыведем явные дубли\033[0m')
     display(df[df.duplicated()])
