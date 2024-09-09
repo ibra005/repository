@@ -1,8 +1,8 @@
 def output_data(df):
     
-    fg = '32'
-    bk = '43'
-    color = '\033[' + fg + ';' + bk +';5m'
+    fg = '31' # цвет шрифта
+    bk = '43' # цвет фона
+    color = f'\033[{fg};{bk};5m'
     
     massage = 'Выведем данные из датасета'
     leng = round((120 - len(massage)) / 2)
@@ -17,14 +17,14 @@ def output_data(df):
     print()
     df.info()
     
-    massage = 'Выведем описание датасета'
+    massage = 'Выведем описательную статистику датасета'
     leng = round((120 - len(massage)) / 2)
     massage = ((' ' * leng) + massage + (' ' * leng))[:120]
     print()
     print(color + massage + '\033[0m')
     display(df.describe())
     
-    massage = 'Выведем описание датасета'
+    massage = 'Выведем явные дубликаты'
     leng = round((120 - len(massage)) / 2)
     massage = ((' ' * leng) + massage + (' ' * leng))[:120]
     print(color + massage + '\033[0m')
