@@ -1,4 +1,4 @@
-def pprocess(df):
+def output_data(df):
     print('\033[34mВыведем данные из датасета\033[0m')
     display(df)
    
