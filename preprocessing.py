@@ -1,14 +1,31 @@
 def output_data(df):
-    print('\033[34mВыведем данные из датасета\033[0m')
+    
+    fg = '32'
+    bk = '43'
+    color = '\033[' + fg + ';' + bk +';5m'
+    
+    massage = 'Выведем данные из датасета'
+    leng = round((120 - len(massage)) / 2)
+    massage = ((' ' * leng) + massage + (' ' * leng))[:120]
+    print(color + massage + '\033[0m')
     display(df)
-   
-    print('\033[34mВыведем общую информацию о датасете\033[0m')
+    
+    massage = 'Выведем общую информацию о датасете'
+    leng = round((121 - len(massage)) / 2)
+    massage = ((' ' * leng) + massage + (' ' * leng))[:120]
+    print(color + massage + '\033[0m')
     print()
     df.info()
     
+    massage = 'Выведем описание датасета'
+    leng = round((120 - len(massage)) / 2)
+    massage = ((' ' * leng) + massage + (' ' * leng))[:120]
     print()
-    print('\033[34mВыведем описание датасета\033[0m')
+    print(color + massage + '\033[0m')
     display(df.describe())
     
-    print('\033[34mВыведем явные дубли\033[0m')
+    massage = 'Выведем описание датасета'
+    leng = round((120 - len(massage)) / 2)
+    massage = ((' ' * leng) + massage + (' ' * leng))[:120]
+    print(color + massage + '\033[0m')
     display(df[df.duplicated()])
