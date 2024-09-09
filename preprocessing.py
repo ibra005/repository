@@ -1,2 +1,2 @@
-def pprocess(df: pd.DataFrame):
+def pprocess(df: pandas.DataFrame):
     pass
