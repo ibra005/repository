@@ -29,3 +29,5 @@ def output_data(df):
     massage = ((' ' * leng) + massage + (' ' * leng))[:120]
     print(color + massage + '\033[0m')
     display(df[df.duplicated()])
+
+    print(f'количество явных дубликатов: \033[034;1m{df.count()}')
