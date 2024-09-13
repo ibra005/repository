@@ -2,7 +2,7 @@ def output_data(df):
     
     fg = '30' # цвет шрифта
     bk = '43' # цвет фона
-    color = f'\033[{fg};{bk};6m'
+    color = f'\033[{fg};{bk};1m'
     
     massage = 'Выведем данные из датасета'
     leng = round((120 - len(massage)) / 2)
